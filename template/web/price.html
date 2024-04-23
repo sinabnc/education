@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'price.css' %}">
+    <script src="https://js.stripe.com/v3/"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <div class=" container-fluid pricingTable pt-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner d-flex tabsBtnHolder">
+                        <ul>
+                            <li><p id="monthly" class="active">Monthly</p></li>
+                            <li><p id="yearly" class="">Yearly</p></li>
+    
+                            <li class="indicator"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row monthlyPriceList animated">
+                <div class="col-md-4">
+                    <div class="inner holder">
+                        <div class="hdng">
+                            <p>Starter Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$69</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="inner holder active">
+                        <div class="hdng">
+                            <p>Basic Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$69.99</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="inner holder">
+                        <div class="hdng">
+                            <p>Business Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$69</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row yearlyPriceList d-none animated">
+                <div class="col-md-4">
+                    <div class="inner holder">
+                        <div class="hdng">
+                            <p>Starter Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$499.99</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="inner holder active">
+                        <div class="hdng">
+                            <p>Basic Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$699.99</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="inner holder">
+                        <div class="hdng">
+                            <p>Business Plan</p>
+                        </div>
+                        <div class="price mt-5">
+                            <p><b>$999.99</b><span> / mo</span></p>
+                        </div>
+                        <div class="info">
+                            <p>Increase Traffic 130%</p>
+                            <p>Backlink Analysis</p>
+                            <p>Organic Trafic 215%</p>
+                            <p>10 Free Optimization</p>
+                            <p>24/7 Support</p>
+                        </div>
+                        <div class="btn">
+                            <form
+                            action="{% url 'create-checkout-session' %}"
+                            method="POST"
+                          >
+                            {% csrf_token %}
+                           <button type="submit" class="readon">Buy now</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'p.js' %}"></script>
+</body>
+</html>

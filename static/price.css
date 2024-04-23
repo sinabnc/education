@@ -1,0 +1,190 @@
+@charset "utf-8";
+@import url('fontawesome-all.min');
+
+html,
+body {
+    font-size: 15px;
+    color: #505050;
+    font-family: 'Rubik', sans-serif;
+    vertical-align: baseline;
+    line-height: 25px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+p {
+    margin: 0 0;
+}
+a {
+    color: #f36233;
+    transition: all 0.3s ease 0s;
+    text-decoration: none !important;
+    outline: none !important;
+}
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: 0 none;
+    color: #242526;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+::-moz-selection {
+    background: #f36233;
+    text-shadow: none;
+    color: #ffffff;
+}
+::selection {
+    background: #f36233;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+
+.pt-90 {
+    padding-top: 90px !important;
+}
+
+/* ------------------------------------
+02. Global CSS
+---------------------------------------*/
+.readon {
+    position: relative;
+    display: inline-block !important;
+    background: #f36233;
+    padding: 14px 30px;
+    line-height: normal;
+    color: #ffffff !important;
+    transition: all 0.3s ease 0s;
+    border-radius: 30px;
+    text-transform: capitalize !important;
+    cursor: pointer;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+.readon:hover,
+.readon:focus {
+    background: #242526;
+}
+
+.inner{
+    width:100%;
+    float:left;
+    position:relative;
+}
+
+
+
+.pricingTable .holder{
+    background: #fff;
+    box-shadow: 1px 20px 12px -15px rgba(0,0,0,0.2);
+    padding: 40px 15px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition:0.5s ease;
+}
+
+.pricingTable .holder:hover{
+    transform:translateY(-5px);
+    
+}
+
+
+
+.pricingTable .holder .hdng p{
+    font-size:28px;
+    font-weight:bold;
+    color:#242526;
+}
+
+.pricingTable .holder .img img{
+    width:70%;
+}
+
+.pricingTable .holder .price p{
+    color:#f36233;
+    margin-bottom:25px;    
+}
+
+.pricingTable .holder .price p b{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.pricingTable .holder .price p span{
+    font-size:18px;
+}
+
+.pricingTable .holder .info p{
+    margin-bottom:15px;
+    color:#242526;
+    font-weight:14px;
+}
+
+.pricingTable .holder.active{
+    background:#f36233;
+}
+
+.pricingTable .holder.active .hdng p,
+.pricingTable .holder.active .price p,
+.pricingTable .holder.active .info p{
+    color:#fff;
+}
+
+.pricingTable .holder.active .readon{
+    background:#fff;
+    color:#f36233!important;
+}
+
+.pricingTable .holder.active .readon:hover{
+    background:#242526;
+    color:#fff!important;
+}
+
+.pricingTable .tabsBtnHolder ul{
+    float:left;
+    display:block;
+    width:100%;
+    max-width:326px;   
+    border-radius:1.6666666667rem;
+    margin:0px auto;
+    margin-bottom:40px; 
+    background:#f36233;
+    text-align:center;
+    position:relative;
+}
+
+.pricingTable .tabsBtnHolder ul li{
+    float:left;
+    width:calc(100% / 2);
+    display:inline-block;
+    transition:0.4s ease;
+}
+
+.pricingTable .tabsBtnHolder ul li p{
+    color:#fff;
+    padding:10px 15px;
+    z-index:10;
+    position:relative;
+    cursor:pointer;
+}
+
+.pricingTable .tabsBtnHolder ul li p.active{
+    color:#f36233;
+}
+
+.pricingTable .tabsBtnHolder ul li.indicator{
+    position: absolute;
+    top: 50%;
+    left: 2px; /*163px*/
+    background: #fff;
+    height: calc(100% - 4px);
+    transform: translateY(-50%);
+    border-radius: 1.5333333333rem;
+    width: 161px;
+    z-index:9
+}
